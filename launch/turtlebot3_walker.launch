@@ -1,0 +1,23 @@
+<launch>
+	
+	<arg
+		name="rosbag_record"
+		default="false"
+	/>
+	<include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch">
+	</include>
+	<node
+		pkg = "turtlebot3_walker"
+		name = "walker"
+		type = "walker"
+		output = "screen"
+		
+	/>
+	<node
+		pkg="rosbag"
+		name="record"
+		type="record"
+		args="--duration=30 --all --output-name=$(find turtlebot3_walker)/results/walker.bag -x /camera/(.*)"
+		if="$(arg rosbag_record)"
+	/>	
+</launch>
