@@ -12,6 +12,8 @@ Implementation of a simple walker algorithm like a Roomba robot vacuum cleaner.T
 
 To install ROS, follow the instructions on this [link](http://wiki.ros.org/kinetic/Installation)
 
+To install Gazebo, follow the instructions on this [link](http://gazebosim.org/tutorials?tut=install_ubuntu)
+
 To install turtlebot packages run following command.
 ```
 sudo apt-get install ros-kinetic-turtlebot-gazebo ros-kinetic-turtlebot-apps ros-kinetic-turtlebot-rviz-launchers
